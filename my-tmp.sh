@@ -1,11 +1,5 @@
 #! /bin/bash
-# Get IP address of the server
-function get_my_ip(){
-    echo "Preparing, Please wait a moment..."
-    IP=`curl -s checkip.dyndns.com | cut -d' ' -f 6  | cut -d'<' -f 1`
-    if [ -z $IP ]; then
-        IP=`curl -s ifconfig.me/ip`
-    fi
-}
-
-get_my_ip
+wget https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py
+chmod a+rx speedtest_cli.py
+sudo mv speedtest_cli.py /usr/local/bin/speedtest-cli
+sudo chown root:root /usr/local/bin/speedtest-cli
