@@ -20,7 +20,7 @@ echo ""
 function install_SS(){
     rootness
     get_my_ip
-    #install_lib
+    install_lib
     pre_doc
     show_doc
     run_doc
