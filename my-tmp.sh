@@ -22,9 +22,9 @@ function install_SS(){
     get_my_ip
     install_lib
     pre_doc
+    apps
     show_doc
     run_doc
-    apps
 }
 # Make sure only root can run our script
 function rootness(){
@@ -75,13 +75,13 @@ function show_doc(){
 
 function run_doc(){
     ssserver -c /etc/shadowsocks.json -d start
+    echo "Test your VPS: speedtest-cli"
 }
 function apps(){
     wget https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py
     chmod a+rx speedtest_cli.py
     sudo mv speedtest_cli.py /usr/local/bin/speedtest-cli
     sudo chown root:root /usr/local/bin/speedtest-cli
-    speedtest-cli
 }
 
 install_SS
