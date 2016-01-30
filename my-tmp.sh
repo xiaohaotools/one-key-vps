@@ -24,7 +24,7 @@ function install_SS(){
     pre_doc
     apps
     show_doc
-    optimizatioin
+    #optimizatioin
     run_doc
 }
 # Make sure only root can run our script
